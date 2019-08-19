@@ -61,8 +61,8 @@ func read(ctx context.Context, file string, insertCh chan Object, concurrency in
 				Location: Coords{
 					Type: "Point",
 					Coordinates: []float64{
-						o.Lon,
 						o.Lat,
+						o.Lon,
 					}},
 			}
 			insertCh <- w
@@ -77,8 +77,8 @@ func read(ctx context.Context, file string, insertCh chan Object, concurrency in
 					location = &Coords{
 						Type: "Point",
 						Coordinates: []float64{
-							v.Lon,
 							v.Lat,
+							v.Lon,
 						}}
 				}
 				members = append(members, Member{
